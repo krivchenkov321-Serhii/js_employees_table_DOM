@@ -57,9 +57,9 @@ tbody.addEventListener('click', (e) => {
   const row = e.target.closest('tr');
 
   //  Знову перевірка на пустий рядок
-  // if (!row || !tbody.contains(row)) {
-  //   return;
-  // }
+  if (!row || !tbody.contains(row)) {
+    return;
+  }
 
   tbody.querySelectorAll('tr').forEach((r) => {
     r.classList.remove('active');
